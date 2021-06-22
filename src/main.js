@@ -13,6 +13,12 @@ import 'boxicons'
 import axios from 'axios'
 // 配置请求的root路径
 axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1'
+    //先拦截登录的命令,将token记录到Authorization中
+axios.interceptors.request.use(config => {
+    console.log(config);
+    config.headers.Authorization = window.sessionStorage.getItem('token')
+    return config;
+})
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
