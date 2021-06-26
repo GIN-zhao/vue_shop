@@ -3,9 +3,10 @@
     <div class="loginbox">
       <!-- 头像区域 -->
       <div class="avatar_box">
-        <img src="../assets/logo.png" alt="" />
+        <img src="../assets/img/love.jpg" alt="" />
       </div>
       <!-- 登录表单区域 -->
+
       <el-form
         ref="LoginFormRef"
         label-width="0px"
@@ -39,6 +40,7 @@
   </div>
 </template>
 <script>
+// import axios from 'axios'
 export default {
   name: 'Login',
   data() {
@@ -84,6 +86,8 @@ export default {
           console.log(valid)
         } else {
           const { data: res } = await this.$http.post('/login', this.loginForm)
+
+          console.log(res)
           if (res.meta.status !== 200)
             return this.$message.error('Login is failure')
           else {
@@ -100,13 +104,19 @@ export default {
 </script>
 <style lang="less" scoped>
 .login_container {
-  background-color: #2b4b6b;
+  background: url('../assets/img/3.jpeg') no-repeat center;
+  background-size: 100%;
   height: 100%;
 }
 .loginbox {
   width: 450px;
   height: 300px;
-  background-color: #fff;
+  background-color: rgba(
+    rgb(44, 161, 228),
+    rgb(67, 165, 211),
+    rgb(25, 102, 218),
+    1
+  );
   border-radius: 3px;
   position: absolute;
   left: 50%;

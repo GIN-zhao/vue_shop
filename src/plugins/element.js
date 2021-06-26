@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { MessageBox } from 'element-ui';
+import { Alert, MessageBox, version } from 'element-ui';
 import {
     Button,
     Form,
@@ -23,7 +23,20 @@ import {
     Switch,
     Tooltip,
     Pagination,
-    Dialog
+    Dialog,
+    Tag,
+    Tree,
+    Select,
+    Option,
+    Cascader,
+    Tabs,
+    TabPane,
+    Steps,
+    Step,
+    CheckboxGroup,
+    Checkbox,
+    Upload
+
 } from 'element-ui'
 
 Vue.use(Button)
@@ -48,6 +61,19 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Upload)
 
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
